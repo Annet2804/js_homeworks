@@ -1,0 +1,197 @@
+body{
+    background-color: #293239;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.form{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.8s ease, opacity 0.4s ease;
+}
+
+.container.fly-up {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.decorPicture1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.decorPicture2{
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 200px;
+    transform: rotate(180deg);
+}
+
+h1{
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    font-size: 50px;
+    font-style: normal;
+    color: #e68342;
+    margin: 80px 0 0 0 ;
+}
+
+h2{
+    text-align: center;
+    font-family: "Monoton", sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: beige;
+    margin: 0;
+}
+
+.mainPicture{
+    margin: 30px 0 0 0;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 45px 10px rgba(251, 251, 251, 0.3);
+    border-radius: 50%;
+
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.buttonOrder{
+    margin: 50px 0 0 0;
+    width: 280px;
+    height: 60px;
+    font-size: 30px;
+    font-family: "Monoton", sans-serif;
+    color: white;
+    background-color: #e68342;
+    animation: moreLess 1s linear infinite;
+}
+
+@keyframes moreLess {
+    0% { scale: 1 }
+    50%   { scale: 1.1 }
+    100% { scale: 1  }
+}
+
+.order-form {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+
+}
+.order-form:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form{
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 30px;
+}
+
+.personalInfo{
+    background: radial-gradient(circle, #f5f1dc  0%, #d4a373 100%);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 14px;
+    padding: 40px 40px 40px 40px;
+    border-radius: 10px;
+}
+
+.PizzaInfo{
+    background: radial-gradient(circle, #f5f1dc  0%, #d4a373 100%);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 14px;
+    padding: 40px 40px 40px 40px;
+    border-radius: 10px;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 15px;
+    background: none;
+
+}
+
+label{
+    font-family: "Great Vibes", cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.TitlePersonal{
+    text-align: center;
+    font-family: "Monoton", sans-serif;
+    font-size: 20px;
+}
+
+.checkbox-groupFormGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.textarea{
+    width: 100%;
+}
+
+.flying-pizza {
+    position:fixed; /* Критично важливо для JS */
+    width: 120px; /* Розмір піци (змініть за потреби) */
+    height: 120px;
+    pointer-events: none; /* Щоб піци не перекривали кліки на кнопки форми */
+    will-change: transform; /* Оптимізація для плавної анімації */
+    /* Початкове положення (щоб не висіли в кутку до завантаження JS) */
+    top: 0;
+    left: 0;
+    /* Невелика тінь для об'єму */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+

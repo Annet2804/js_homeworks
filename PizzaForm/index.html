@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Great+Vibes&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--ЗАСТАВКА-->
+<div class="container" id="container">
+    <img class="decorPicture1" src="pictures/decor.png" alt="Lines">
+    <img class="decorPicture2" src="pictures/decor.png" alt="Lines">
+    <h1>Today's Special</h1>
+    <h2>DELICIOUS   PIZZA</h2>
+    <img class="mainPicture" src="pictures/pizza.png" alt="Pizza">
+    <button class="buttonOrder" id="orderBtn">ORDER NOW</button>
+</div>
+
+<img src="pictures/pizza.png" class="flying-pizza" id="p1" alt="Pizza 1">
+<img src="pictures/pizza.png" class="flying-pizza" id="p2" alt="Pizza 2">
+<img src="pictures/pizza.png" class="flying-pizza" id="p3" alt="Pizza 3">
+<img src="pictures/pizza.png" class="flying-pizza" id="p4" alt="Pizza 4">
+<img src="pictures/pizza.png" class="flying-pizza" id="p5" alt="Pizza 5">
+<img src="pictures/pizza.png" class="flying-pizza" id="p6" alt="Pizza 6">
+
+<img src="pictures/pizza.png" class="flying-pizza" id="p7" alt="Pizza 7">
+<img src="pictures/pizza.png" class="flying-pizza" id="p8" alt="Pizza 8">
+
+<!--ФОРМА ЗАМОВЛЕННЯ-->
+<div class="order-form hidden" id="FormSection">
+    <h1>Placing an order</h1>
+
+    <form class="form">
+
+        <div class="personalInfo">
+
+            <div class="TitlePersonal">Personal Information</div>
+
+            <div class="formGroup">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" >
+            </div>
+
+            <div class="formGroup">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" >
+            </div>
+
+            <div class="formGroup">
+                <label for="tel">Number</label>
+                <input type="tel" id="tel" name="tel" >
+            </div>
+
+            <div class="formGroup">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" >
+            </div>
+
+            <div class="formGroup">
+                <label for="adress">Аddress</label>
+                <input type="text" id="adress" name="adress" >
+            </div>
+
+
+            <div class="checkbox-groupFormGroup">
+
+                <div class="checkbox-group">
+                    <input type="radio" id="pay-cash" name="payment" value="cash">
+                    <label class="checkbox" for="pay-cash">By Cash</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="radio" id="pay-card" name="payment" value="card">
+                    <label class="checkbox" for="pay-card">By card</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="radio" id="pay-online" name="payment" value="online">
+                    <label class="checkbox" for="pay-online">Online</label>
+                </div>
+            </div>
+
+            <div class="formGroup">
+                <label for="comment">Comments</label>
+                <textarea id="comment" name="comment" ></textarea>
+            </div>
+
+
+        </div>
+
+
+        <div class="container_">
+
+            <div class="PizzaInfo">
+
+                <div class="TitlePersonal">Pizza Selection</div>
+
+                <div class="formGroup">
+                    <label for="pizza-select">Choose your pizza</label>
+                    <select id="pizza-select" name="pizza_type">
+                        <option value="" disabled selected>Select a pizza</option>
+                        <option value="margarita">Margherita (Classic)</option>
+                        <option value="pepperoni">Pepperoni with spicy sausages</option>
+                        <option value="four-cheeses">Four Cheeses</option>
+                        <option value="bbq">BBQ Chicken</option>
+                        <option value="hawaiian">Hawaiian with pineapples</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Pizza size</label>
+                    <div class="radio-group-horizontal">
+                        <label>
+                            <input type="radio" name="size" value="small" checked> 30 см
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="medium"> 35 см
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="large"> 40 см
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                </div>
+
+            </div>
+
+            <button class="buttonOrder" >ORDER NOW</button>
+
+        </div>
+
+    </form>
+
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
